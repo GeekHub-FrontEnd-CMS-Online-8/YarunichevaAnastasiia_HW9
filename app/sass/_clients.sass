@@ -1,0 +1,68 @@
+.client
+    padding-bottom: 100px
+
+.carousel
+    width: 100%
+    position: relative
+    padding-bottom: 25%
+    overflow: hidden
+
+.carousel-selector 
+    display: none
+
+.carousel-items
+    margin: 0
+    padding: 0
+    list-style: none
+    display: block
+    width: 300%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1
+    transition: left .5s ease-out
+
+.carousel-item
+    width: 33.33333333%
+    height: 100%
+
+.carousel-labels
+    margin: 0
+    padding: 0
+    list-style: none
+    display: block
+    position: absolute
+    z-index: 2
+    left: 0
+    bottom: 0
+    height: 20px
+    width: 100%
+
+.carousel-selector
+    display: none
+
+.carousel-label
+    display: inline-block
+
+.carousel-label label
+    display: block
+    cursor: pointer
+
+#slide1:checked ~ .carousel-items
+    left: 0
+
+#slide1:checked ~ .carousel-labels .carousel-label:nth-child(1) label
+    background-color: #000
+
+#slide2:checked ~ .carousel-items
+    left: -100%
+
+#slide2:checked ~ .carousel-labels .carousel-label:nth-child(2) label 
+    background-color: #000
+
+#slide3:checked ~ .carousel-items 
+    left: -200%
+
+#slide3:checked ~ .carousel-labels .carousel-label:nth-child(3) label 
+    background-color: #000
